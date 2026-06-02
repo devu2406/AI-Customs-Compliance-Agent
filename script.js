@@ -46,3 +46,52 @@ function showFiles(files){
         fileList.appendChild(li);
     }
 }
+const documentsChart =
+document.getElementById('documentsChart');
+
+new Chart(documentsChart, {
+    type: 'line',
+    data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets: [{
+            label: 'Documents',
+            data: [45,60,75,90,120,150]
+        }]
+    }
+});
+const hsCodeChart =
+document.getElementById('hsCodeChart');
+
+new Chart(hsCodeChart, {
+    type: 'pie',
+    data: {
+        labels: [
+            'Electronics',
+            'Textiles',
+            'Machinery',
+            'Chemicals'
+        ],
+        datasets: [{
+            data: [35,25,20,20]
+        }]
+    }
+});
+const countryChart =
+document.getElementById('countryChart');
+
+new Chart(countryChart, {
+    type: 'bar',
+    data: {
+        labels: [
+            'USA',
+            'China',
+            'Germany',
+            'Japan',
+            'UAE'
+        ],
+        datasets: [{
+            label:'Imports',
+            data:[120,220,80,70,100]
+        }]
+    }
+});
