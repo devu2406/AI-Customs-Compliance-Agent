@@ -182,3 +182,72 @@ progress{
 .ocr-table tr:hover{
     background:#f5f7fb;
 }
+.search-card,
+.classification-card,
+.table-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-card input{
+    width:70%;
+    padding:12px;
+}
+
+.search-card button{
+    padding:12px 20px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category-card{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.layout{
+    display:flex;
+}
+
+.sidebar{
+    width:250px;
+    min-height:100vh;
+    background:#1e293b;
+    color:white;
+    padding:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    margin-bottom:10px;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:10px;
+    border-radius:8px;
+}
+
+.sidebar a:hover{
+    background:#334155;
+}
+
+.main-content{
+    flex:1;
+    padding:20px;
+}
