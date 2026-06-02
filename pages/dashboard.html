@@ -1,3 +1,16 @@
+<script>
+
+if(
+    localStorage.getItem(
+        "isLoggedIn"
+    ) !== "true"
+){
+    window.location.href =
+    "./login.html";
+}
+
+</script>
+
 <div class="layout">
 
     <aside class="sidebar">
@@ -73,3 +86,13 @@
  [Generate Declaration]
 
 -------------------------------------------------
+<button onclick="logout()">
+    Logout
+</button>
+<script>
+
+if(localStorage.getItem("isLoggedIn") !== "true"){
+    window.location.href = "./login.html";
+}
+
+</script>

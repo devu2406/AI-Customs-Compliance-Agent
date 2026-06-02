@@ -129,3 +129,93 @@ function generateDeclaration(){
         2
     );
 }
+function registerUser(){
+
+    const email =
+    document.getElementById("registerEmail").value;
+
+    const password =
+    document.getElementById("registerPassword").value;
+
+    if(email === "" || password === ""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    localStorage.setItem(
+        "userEmail",
+        email
+    );
+
+    alert("Registration Successful");
+
+    window.location.href =
+    "./login.html";
+}
+function login(){
+
+    const email =
+    document.getElementById("loginEmail").value;
+
+    const password =
+    document.getElementById("loginPassword").value;
+
+    if(email === "" || password === ""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    localStorage.setItem(
+        "isLoggedIn",
+        "true"
+    );
+
+    window.location.href =
+    "./dashboard.html";
+}
+function logout(){
+
+    localStorage.removeItem("isLoggedIn");
+
+    window.location.href =
+    "./login.html";
+}
+function downloadJSON(){
+
+    const content =
+    document.getElementById(
+        "jsonPreview"
+    ).textContent;
+
+    const blob =
+    new Blob(
+        [content],
+        {
+            type:"application/json"
+        }
+    );
+
+    const url =
+    URL.createObjectURL(blob);
+
+    const a =
+    document.createElement("a");
+
+    a.href = url;
+    a.download =
+    "customs_declaration.json";
+
+    a.click();
+}
+
+function exportPDF(){
+    alert(
+        "PDF Export will connect to backend later"
+    );
+}
+
+function exportExcel(){
+    alert(
+        "Excel Export will connect to backend later"
+    );
+}
