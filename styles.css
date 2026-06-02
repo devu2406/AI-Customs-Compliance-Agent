@@ -289,3 +289,34 @@ progress{
 .warning{
     border-left:5px solid orange;
 }
+.declaration-form{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.declaration-form input,
+.declaration-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+}
+
+.declaration-form textarea{
+    min-height:120px;
+}
+
+.preview-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.preview-card pre{
+    background:#f5f7fb;
+    padding:20px;
+    overflow:auto;
+}

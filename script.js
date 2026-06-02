@@ -95,3 +95,37 @@ new Chart(countryChart, {
         }]
     }
 });
+function generateDeclaration(){
+
+    const exporter =
+    document.getElementById("exporter").value;
+
+    const importer =
+    document.getElementById("importer").value;
+
+    const country =
+    document.getElementById("country").value;
+
+    const hscode =
+    document.getElementById("hscode").value;
+
+    const goods =
+    document.getElementById("goods").value;
+
+    const declaration = {
+        exporter,
+        importer,
+        country,
+        hs_code:hscode,
+        goods_description:goods
+    };
+
+    document.getElementById(
+        "jsonPreview"
+    ).textContent =
+    JSON.stringify(
+        declaration,
+        null,
+        2
+    );
+}

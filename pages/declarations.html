@@ -23,3 +23,89 @@
     </main>
 
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customs Declaration Generator</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Customs Declaration Generator</h1>
+
+    <div class="declaration-form">
+
+        <input
+            type="text"
+            id="exporter"
+            placeholder="Exporter Name">
+
+        <input
+            type="text"
+            id="importer"
+            placeholder="Importer Name">
+
+        <input
+            type="text"
+            id="country"
+            placeholder="Destination Country">
+
+        <input
+            type="text"
+            id="hscode"
+            placeholder="HS Code">
+
+        <textarea
+            id="goods"
+            placeholder="Goods Description"></textarea>
+
+        <button onclick="generateDeclaration()">
+            Generate Declaration
+        </button>
+
+    </div>
+
+    <div class="preview-card">
+
+        <h2>Declaration Preview</h2>
+
+        <pre id="jsonPreview">
+
+{
+  "exporter":"",
+  "importer":"",
+  "country":"",
+  "hs_code":"",
+  "goods_description":""
+}
+
+        </pre>
+
+    </div>
+
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
+<div class="export-buttons">
+
+    <button>
+        Export PDF
+    </button>
+
+    <button>
+        Export Excel
+    </button>
+
+    <button>
+        Download JSON
+    </button>
+
+</div>
