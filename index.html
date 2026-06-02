@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Customs Compliance Agent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>AI Customs Compliance Platform</h1>
+        <p>Upload Customs Documents for Compliance Validation</p>
+    </header>
+
+    <div class="container">
+
+        <div class="upload-card">
+
+            <h2>Upload Documents</h2>
+
+            <input
+                type="file"
+                id="documents"
+                multiple
+                accept=".pdf,.jpg,.jpeg,.png">
+
+            <button onclick="uploadFiles()">
+                Upload
+            </button>
+
+        </div>
+
+        <div class="results-card">
+
+            <h2>Processing Results</h2>
+
+            <div id="status">
+
+                Waiting for documents...
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
